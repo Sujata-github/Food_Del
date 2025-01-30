@@ -10,7 +10,7 @@ import 'react-toastify/dist/ReactToastify.css'
 
 const App = () => {
   const url = 'https://food-del-backend-vjsc.onrender.com'
-  // const url = 'http://localhost:4000'
+  // const url = 'http://localhost:10000'
   return (
     <div>
       <NavBar />

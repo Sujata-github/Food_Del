@@ -6,6 +6,7 @@ import userRouter from './routes/userRoutes.js'
 import 'dotenv/config'
 import cartRouter from './routes/cartRouter.js'
 import orderRouter from './routes/orderRoute.js'
+import morgan from 'morgan'
 //app config
 const app = express()
 const port = process.env.PORT || 10000
@@ -13,6 +14,7 @@ const port = process.env.PORT || 10000
 // middleware
 app.use(express.json())
 app.use(cors())
+app.use(morgan("dev"))
 
 //db connection
 connectDB()
