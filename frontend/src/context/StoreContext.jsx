@@ -7,7 +7,8 @@ export const StoreContext = createContext(null)
 const StoreContextProvider = props => {
   const [cartItems, setCartItems] = useState({})
 
-  const url = 'http://localhost:4000'
+  const url = 'https://food-del-backend-vjsc.onrender.com'
+  // const url = 'http://localhost:4000'
   const [token, setToken] = useState('')
   const [food_list, setFoodList] = useState([])
 
@@ -46,12 +47,10 @@ const StoreContextProvider = props => {
       return
     }
     if (!cartItems || !itemId) {
-      console.error("Invalid state or itemId:", { cartItems, itemId });
-      return;
+      console.error('Invalid state or itemId:', { cartItems, itemId })
+      return
     }
-    
-   
-    
+
     const key = String(itemId) // Consistently handle key as a string
     setCartItems(prev => ({
       ...prev,
@@ -108,17 +107,16 @@ const StoreContextProvider = props => {
   //   )
   //   setCartItems(response.data.cartData)
   // }
-  const loadCartData = async (token) => {
+  const loadCartData = async token => {
     try {
       const response = await axios.get(url + '/api/cart/get', {
-        headers: { token },
-      });
-      setCartItems(response.data.cartData || {});
+        headers: { token }
+      })
+      setCartItems(response.data.cartData || {})
     } catch (error) {
-      console.error("Error loading cart data:", error);
+      console.error('Error loading cart data:', error)
     }
-  };
-  
+  }
 
   useEffect(() => {
     async function loadData () {

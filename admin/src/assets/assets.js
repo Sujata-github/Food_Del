@@ -14,4 +14,4 @@ const assets = {
   parcel_icon
 }
 export default assets
-// export const url = 'http://localhost:4000'
+export const url = 'https://food-del-backend-vjsc.onrender.com'
