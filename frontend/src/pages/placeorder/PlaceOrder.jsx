@@ -26,9 +26,6 @@ const PlaceOrder = () => {
     setData(data => ({ ...data, [name]: value }))
   }
 
-  // useEffect(() => {
-  //   console.log(data)
-  // }, [data])cons
   const placeOrder = async event => {
     event.preventDefault()
     let orderItems = []
@@ -39,7 +36,6 @@ const PlaceOrder = () => {
         orderItems.push(itemInfo)
       }
     })
-    // console.log(orderItems)
     let orderData = {
       address: data,
       items: orderItems,
@@ -70,94 +66,7 @@ const PlaceOrder = () => {
     >
       <div className='md:w-[50%] w-full   '>
         <p className='text-2xl font-bold mb-12 '>Delivery Information</p>
-        {/* <div className=''>
-          <div className='flex gap-3 '>
-            <input
-              required
-              name='firstName'
-              onChange={onChangeHandler}
-              value={data.firstName}
-              className=' mb-4 p-2 border-[1px] border-solid border-[#c5c5c5] rounded outline-tomato'
-              type='text'
-              placeholder='First Name'
-            />
-            <input
-              required
-              name='lastName'
-              onChange={onChangeHandler}
-              value={data.lastName}
-              className='mb-4 p-2 border-[1px] border-solid border-[#c5c5c5] rounded outline-tomato'
-              type='text'
-              placeholder='Last Name'
-            />
-          </div>
-          <input
-            name='email'
-            onChange={onChangeHandler}
-            value={data.email}
-            className='  w-full  mb-4 p-2 border-[1px] border-solid border-[#c5c5c5] rounded outline-tomato '
-            type='email'
-            placeholder='Email Address'
-          />
-          <input
-            required
-            name='street'
-            onChange={onChangeHandler}
-            value={data.street}
-            className=' w-full  mb-4 p-2 border-[1px] border-solid border-[#c5c5c5] rounded outline-tomato'
-            type='text'
-            placeholder='Street'
-          />
-          <div className='flex gap-2'>
-            <input
-              required
-              name='city'
-              onChange={onChangeHandler}
-              value={data.city}
-              className='mb-4 p-2 border-[1px] border-solid border-[#c5c5c5] rounded outline-tomato'
-              type='text'
-              placeholder='City'
-            />
-            <input
-              required
-              name='state'
-              onChange={onChangeHandler}
-              value={data.state}
-              className='mb-4 p-2 border-[1px] border-solid border-[#c5c5c5] rounded outline-tomato'
-              type='text'
-              placeholder='State'
-            />
-          </div>
-          <div className='flex gap-2'>
-            <input
-              required
-              name='zipcode'
-              onChange={onChangeHandler}
-              value={data.zipcode}
-              className='mb-4 p-2 border-[1px] border-solid border-[#c5c5c5] rounded outline-tomato'
-              type='text'
-              placeholder='Zip code'
-            />
-            <input
-              required
-              name='country'
-              onChange={onChangeHandler}
-              value={data.country}
-              className='mb-4 p-2 border-[1px] border-solid border-[#c5c5c5] rounded outline-tomato'
-              type='text'
-              placeholder='Country'
-            />
-          </div>
-          <input
-            required
-            name='phone'
-            onChange={onChangeHandler}
-            value={data.phone}
-            className='w-full  mb-4 p-2 border-[1px] border-solid border-[#c5c5c5] rounded outline-tomato'
-            type='text'
-            placeholder='Phone'
-          />
-        </div> */}
+
         <div className='w-full'>
           {/* Name Inputs */}
           <div className='flex flex-col sm:flex-row gap-3'>

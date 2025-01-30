@@ -10,20 +10,7 @@ const Verify = () => {
   const navigate = useNavigate()
 
   const { url } = useContext(StoreContext)
-  // const verifyPayment = async () => {
-  //   const response = await axios.post(url + '/api/order/verify', {
-  //     success: orderId
-  //   })
-  //   console.log('response', response)
-  //   if (response) {
-  //     navigate('/myorders')
-  //   }
-  //   // if (response.data.success) {
-  //   //   navigate('/myorders')
-  //   // } else {
-  //   //   navigate('/')
-  //   // }
-  // }
+
   const verifyPayment = async () => {
     const response = await axios.post(url + '/api/order/verify', {
       orderId: orderId,
@@ -40,7 +27,7 @@ const Verify = () => {
   useEffect(() => {
     verifyPayment()
   }, [])
-  //   console.log(success, orderId)
+
   return (
     <div className='min-h-[60vh] flex items-center justify-center'>
       <div className=' h-20 w-20 grid '>
