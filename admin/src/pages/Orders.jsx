@@ -33,7 +33,7 @@ const Orders = ({ url }) => {
   }
   return (
     <div className='order add w-[80%] m-auto'>
-      <h3 className='px-6 py-1'>Order Page</h3>
+      <h3 className='px-6 pt-3 text-xl font-semibold'>Orders Page</h3>
       <div className='order-list py-5  space-y-4'>
         {orders.map((order, index) => (
           <div
@@ -74,7 +74,7 @@ const Orders = ({ url }) => {
               <p className='phone'>{order.address.phone}</p>
             </div>
             <p>Items : {order.items.length}</p>
-            <p>${order.amount}</p>
+            <p>₹{order.amount}</p>
             <select
               onChange={event => statusHandler(event, order._id)}
               value={order.status}

@@ -1,7 +1,7 @@
 import React from 'react'
 import NavBar from './components/navbar/NavBar'
 import Sidebar from './components/sidebar/Sidebar'
-import { Route, Routes } from 'react-router-dom'
+import { Navigate, Route, Routes } from 'react-router-dom'
 import Add from './pages/Add'
 import List from './pages/List'
 import Orders from './pages/Orders'
@@ -18,6 +18,8 @@ const App = () => {
         <Sidebar />
         <ToastContainer autoClose={2000} />
         <Routes>
+          {/* Redirect from the root path `/` to `/add` */}
+          <Route path='/' element={<Navigate to='/add' />} />
           <Route path='/add' element={<Add url={url} />} />
           <Route path='/list' element={<List url={url} />} />
           <Route path='/orders' element={<Orders url={url} />} />

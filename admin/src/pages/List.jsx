@@ -30,7 +30,9 @@ const List = ({ url }) => {
   }
   return (
     <div className='flex w-full  flex-col items-center justify-start my-4'>
-      <p className='text-xl font-bold self-start ml-7 my-2'>All Food List</p>
+      <p className='text-xl font-semibold self-start ml-14 my-2 w'>
+        All Food List
+      </p>
       <div className='w-[90%] grid grid-cols-5 items-center gap-1 px-3 py-2 border-[1px] border-solid border-[#cacaca] text-sm  bg-[#f9f9f9]'>
         <b>Image</b>
         <b>Name</b>
@@ -45,13 +47,13 @@ const List = ({ url }) => {
             className='w-[90%] grid grid-cols-5 items-center gap-1 px-3 py-2 border-[1px] border-t-0 border-solid border-[#cacaca] text-sm '
           >
             <img
-              className='w-[50%]'
+              className='w-[30%]'
               src={`${url}/images/` + item.image}
               alt=''
             />
             <p>{item.name}</p>
             <p>{item.category}</p>
-            <p>${item.price}</p>
+            <p>₹{item.price}</p>
             <p
               onClick={() => {
                 removeFood(item._id)

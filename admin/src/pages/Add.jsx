@@ -96,7 +96,7 @@ const Add = ({ url }) => {
               onChange={onChangeHandler}
               value={data.category}
               name='category'
-              className='w-32 p-1 border-[1px] border-solid border-gray-400'
+              className='w-32 p-[5px] border-[1px] border-solid border-gray-400'
             >
               <option value='Salad'>Salad</option>
               <option value='Rolls'>Rolls</option>
@@ -116,7 +116,7 @@ const Add = ({ url }) => {
               className='w-32 p-1 border-[1px] border-solid border-gray-400'
               type='number'
               name='price'
-              placeholder='$20'
+              placeholder='₹20'
             />
           </div>
         </div>
