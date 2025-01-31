@@ -4,8 +4,8 @@ import { StoreContext } from '../../context/StoreContext'
 
 const FoodItem = ({ id, name, price, description, image }) => {
   const { cartItems, addToCart, removeFromCart, url } = useContext(StoreContext)
-  console.log('id', id)
-  console.log('cartItems', cartItems)
+  // console.log('id', id)
+  // console.log('cartItems', cartItems)
   return (
     <div
       // key={id}
