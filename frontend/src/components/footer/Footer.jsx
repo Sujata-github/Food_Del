@@ -41,7 +41,7 @@ const Footer = () => {
       </div>
       <hr className='w-full h-[1px] mx-[2px] my-0 bg-gray-600 border-0' />
       <p className='text-sm sm:text-base pt-3'>
-        Copyright 2024 © Tomato.com - All Rights Reserved
+        Copyright 2025 © Tomato.com - All Rights Reserved
       </p>
     </div>
   )
